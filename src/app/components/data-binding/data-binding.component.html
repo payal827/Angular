@@ -1,0 +1,45 @@
+<p>data-binding works!</p>
+
+<div class="row">
+    <div class="col-3">
+        one way
+    </div>
+    <div class="col-3">
+
+    </div>
+    <div class="col-3"></div>
+
+</div>
+
+<div class="row">
+    <div class="col-4">
+        <div class="row">
+            <div class="col-4">
+                {{courseName}}
+            </div>
+            <input type="text" value="{{courseName}}" placeholder="Enter ur text">
+        </div>
+        <div class="col-4">
+
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="btn btn-success" (click)="showAlert('welcome to Angular 18')">Show Welcome</div>
+        <div class="btn btn-success" (click)="changeCourseName()">Change btn</div>
+    </div>
+    <div class="col-4">
+
+        <input type="text" [(ngModel)]="courseName"/> - {{courseName}}>
+        <select [(ngModel)]="stateName">
+            <option value="select">Select</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Goa">Goa</option>
+
+        </select>
+
+    </div>
+    <div class="col-4">
+        <h2> {{firstName()}}</h2>
+    </div>
+
+</div>
