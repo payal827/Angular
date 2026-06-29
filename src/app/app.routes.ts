@@ -4,6 +4,9 @@ import { DataBindingComponent } from './components/data-binding/data-binding.com
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { StructuralDirComponent } from './components/directive/structural-dir/structural-dir.component';
 import { AttributeDirectiveComponent } from './components/directive/attribute-directive/attribute-directive.component';
+import { IfElseComponent } from './components/controlflow/if-else/if-else.component';
+import { ForComponent } from './components/controlflow/for/for.component';
+import { SwitchComponent } from './components/controlflow/switch/switch.component';
 
 export const routes: Routes = [
     {
@@ -25,5 +28,17 @@ export const routes: Routes = [
     {
         path: 'attributedirective',
         component: AttributeDirectiveComponent
+    },
+    {
+        path: "if-else",
+        component: IfElseComponent
+    },
+    {
+        path: 'for',
+        component: ForComponent
+    },
+    {
+        path: 'switch-case',
+        component: SwitchComponent
     }
 ];
