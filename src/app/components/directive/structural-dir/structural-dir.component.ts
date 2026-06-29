@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router, RouteReuseStrategy } from '@angular/router';
 
 @Component({
   selector: 'app-structural-dir',
@@ -19,6 +20,9 @@ export class StructuralDirComponent {
   isActive: boolean = false;
 
   selectedState: string = "";
+  constructor(private router: Router){
+
+  }
 
   cityArray: string [] = ['Pune', 'Nagpur', 'Mumbai','Thane', 'chandrapur'];
 
@@ -27,6 +31,11 @@ export class StructuralDirComponent {
     {studId:2, name:'BB', city:'Nagpur', isActive: true },
     {studId:3, name:'CC', city:'Mumbai', isActive: false },
   ]
+
+  navigateToAttribute(){
+    this.router.navigateByUrl("attributedirective")
+
+  }
 
 
   showDiv1() {
