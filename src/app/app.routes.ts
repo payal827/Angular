@@ -9,6 +9,9 @@ import { ForComponent } from './components/controlflow/for/for.component';
 import { SwitchComponent } from './components/controlflow/switch/switch.component';
 import { PipeComponent } from './components/pipe/pipe.component';
 import { TemplateComponent } from './components/forms/template/template.component';
+import { ReactiveComponent } from './components/forms/reactive/reactive.component';
+import { GetApiComponent } from './components/apiintegration/get-api/get-api.component';
+import { PostApiComponent } from './components/apiintegration/post-api/post-api.component';
 
 export const routes: Routes = [
     {
@@ -50,5 +53,18 @@ export const routes: Routes = [
     {
         path: 'template',
         component: TemplateComponent
+    },
+    {
+        path: 'reactive',
+        component: ReactiveComponent
+    },
+    {
+        path: 'get-api',
+        component: GetApiComponent
+    },
+    {
+        path: 'post-api',
+        component: PostApiComponent
+
     }
 ];
