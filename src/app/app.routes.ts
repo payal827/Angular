@@ -13,6 +13,10 @@ import { ReactiveComponent } from './components/forms/reactive/reactive.componen
 import { GetApiComponent } from './components/apiintegration/get-api/get-api.component';
 import { PostApiComponent } from './components/apiintegration/post-api/post-api.component';
 import { LifecycleEventComponent } from './components/lifecycle-event/lifecycle-event/lifecycle-event.component';
+import { NgTemplateComponent } from './components/directive/ng-template/ng-template.component';
+import { NgContainerComponent } from './components/directive/ng-container/ng-container.component';
+import { ViewchildComponent } from './components/decorators/viewchild/viewchild.component';
+
 
 export const routes: Routes = [
     {
@@ -71,5 +75,17 @@ export const routes: Routes = [
     {
         path: 'lifecycle-event',
         component: LifecycleEventComponent
+    },
+    {
+        path: 'ng-template',
+        component: NgTemplateComponent
+    },
+    {
+        path: 'ng-container',
+        component: NgContainerComponent
+    },
+    {
+        path: 'view-child',
+        component: ViewchildComponent
     }
 ];
