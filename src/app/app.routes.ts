@@ -16,76 +16,97 @@ import { LifecycleEventComponent } from './components/lifecycle-event/lifecycle-
 import { NgTemplateComponent } from './components/directive/ng-template/ng-template.component';
 import { NgContainerComponent } from './components/directive/ng-container/ng-container.component';
 import { ViewchildComponent } from './components/decorators/viewchild/viewchild.component';
+import { LoginComponent } from './components/login/login.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 
 export const routes: Routes = [
+    //defaul troute
     {
-        path: 'add-emp',
-        component: AddEmployeeComponent
-    },
-    {
-        path: 'data-binding',
-        component: DataBindingComponent
-    },
-    {
-        path: 'emp-list',
-        component: EmployeeListComponent
-    },
-    {
-        path: 'structural-dir',
-        component: StructuralDirComponent
-    },
-    {
-        path: 'attributedirective',
-        component: AttributeDirectiveComponent
-    },
-    {
-        path: "if-else",
-        component: IfElseComponent
-    },
-    {
-        path: 'for',
-        component: ForComponent
-    },
-    {
-        path: 'switch-case',
-        component: SwitchComponent
-    },
-    {
-        path: 'pipe',
-        component: PipeComponent
-    },
-    {
-        path: 'template',
-        component: TemplateComponent
-    },
-    {
-        path: 'reactive',
-        component: ReactiveComponent
-    },
-    {
-        path: 'get-api',
-        component: GetApiComponent
-    },
-    {
-        path: 'post-api',
-        component: PostApiComponent
+        path: '',
+        redirectTo: 'login',
+        pathMatch: 'full'
 
     },
     {
-        path: 'lifecycle-event',
-        component: LifecycleEventComponent
+        path: 'login',
+        component: LoginComponent
     },
     {
-        path: 'ng-template',
-        component: NgTemplateComponent
-    },
-    {
-        path: 'ng-container',
-        component: NgContainerComponent
-    },
-    {
-        path: 'view-child',
-        component: ViewchildComponent
+        path: '',
+        component: LayoutComponent,
+        children: [
+            {
+                path: 'add-emp',
+                component: AddEmployeeComponent
+            },
+            {
+                path: 'data-binding',
+                component: DataBindingComponent
+            },
+            {
+                path: 'emp-list',
+                component: EmployeeListComponent
+            },
+            {
+                path: 'structural-dir',
+                component: StructuralDirComponent
+            },
+            {
+                path: 'attributedirective',
+                component: AttributeDirectiveComponent
+            },
+            {
+                path: "if-else",
+                component: IfElseComponent
+            },
+            {
+                path: 'for',
+                component: ForComponent
+            },
+            {
+                path: 'switch-case',
+                component: SwitchComponent
+            },
+            {
+                path: 'pipe',
+                component: PipeComponent
+            },
+            {
+                path: 'template',
+                component: TemplateComponent
+            },
+            {
+                path: 'reactive',
+                component: ReactiveComponent
+            },
+            {
+                path: 'get-api',
+                component: GetApiComponent
+            },
+            {
+                path: 'post-api',
+                component: PostApiComponent
+
+            },
+            {
+                path: 'lifecycle-event',
+                component: LifecycleEventComponent
+            },
+            {
+                path: 'ng-template',
+                component: NgTemplateComponent
+            },
+            {
+                path: 'ng-container',
+                component: NgContainerComponent
+            },
+            {
+                path: 'view-child',
+                component: ViewchildComponent
+            }
+
+        ]
     }
+
 ];
