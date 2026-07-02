@@ -1,6 +1,7 @@
 import { JsonPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Constant } from '../../../constant/contsant';
 
 @Component({
   selector: 'app-template',
@@ -20,11 +21,11 @@ export class TemplateComponent {
     isAcceptTerms: false
 
   }
-  //   validationMessage: any =  Constant.VALIDATION_MESSAGE;
+    validationMessage: any =  Constant.VALIDATION_MESSAGE;
   formValue: any;
-  validationMessage = {
-  REQUIRED: 'This field is required'
-};
+//   validationMessage = {
+//   REQUIRED: 'This field is required'
+// };
 
   onSubmit() {
     debugger;

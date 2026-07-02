@@ -18,6 +18,7 @@ import { NgContainerComponent } from './components/directive/ng-container/ng-con
 import { ViewchildComponent } from './components/decorators/viewchild/viewchild.component';
 import { LoginComponent } from './components/login/login.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { authGuard } from './service/auth.guard';
 
 
 export const routes: Routes = [
@@ -38,11 +39,13 @@ export const routes: Routes = [
         children: [
             {
                 path: 'add-emp',
-                component: AddEmployeeComponent
+                component: AddEmployeeComponent,
+                // canActivate: [authGuard]
             },
             {
                 path: 'data-binding',
-                component: DataBindingComponent
+                component: DataBindingComponent,
+                canActivate: [authGuard]
             },
             {
                 path: 'emp-list',
@@ -50,7 +53,8 @@ export const routes: Routes = [
             },
             {
                 path: 'structural-dir',
-                component: StructuralDirComponent
+                component: StructuralDirComponent,
+                canActivate: [authGuard]
             },
             {
                 path: 'attributedirective',
